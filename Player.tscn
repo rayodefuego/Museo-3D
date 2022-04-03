@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://3th_person_camera.gd" type="Script" id=2]
 [ext_resource path="res://Mira.png" type="Texture" id=3]
+[ext_resource path="res://MiraRayCast.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.260688
@@ -35,7 +36,10 @@ expand = true
 stretch_mode = 4
 
 [node name="RayCast" type="RayCast" parent="Camera"]
-transform = Transform( 1, 1.44641e-07, -1.91069e-15, 0, -1.44641e-07, -1, -4.37114e-08, 3.309, -4.37114e-08, -0.000167846, -0.00534183, 0.00918138 )
+transform = Transform( 1, 2.55275e-07, -1.91069e-15, 0, -2.55275e-07, -1, -4.37114e-08, 5.84, -4.37114e-08, -0.000167846, -0.00534183, 0.00918138 )
+enabled = true
 collide_with_areas = true
 collide_with_bodies = false
 debug_shape_custom_color = Color( 1, 0, 0, 1 )
+debug_shape_thickness = 1
+script = ExtResource( 4 )
