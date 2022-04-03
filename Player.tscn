@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://3th_person_camera.gd" type="Script" id=2]
+[ext_resource path="res://Mira.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.260688
+height = 0.707036
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.8, 0, 0, 0, -7.86805e-08, -1.8, 0, 1.8, -7.86805e-08, 0, 1.11737, 0 )
+shape = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2.12061, 0 )
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 512.0
+margin_top = 300.0
+margin_right = -502.0
+margin_bottom = -290.0
+rect_pivot_offset = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="RayCast" type="RayCast" parent="Camera"]
+transform = Transform( 1, 1.44641e-07, -1.91069e-15, 0, -1.44641e-07, -1, -4.37114e-08, 3.309, -4.37114e-08, -0.000167846, -0.00534183, 0.00918138 )
+collide_with_areas = true
+collide_with_bodies = false
+debug_shape_custom_color = Color( 1, 0, 0, 1 )
