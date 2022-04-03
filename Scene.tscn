@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Wood_floor.tres" type="Material" id=2]
+[ext_resource path="res://Meshes/cuadro monalisa.glb" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=3]
 
@@ -438,3 +439,21 @@ material/0 = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.750219, 6.61612e-05, -0.354252 )
+
+[node name="cuadro monalisa" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -2.91716, 2.48375, -5.0004 )
+
+[node name="Wall" type="StaticBody" parent="."]
+transform = Transform( 0.53, 0, 0, 0, 0.77, 0, 0, 0, 0.01, -3.00007, 0.00392556, -0.150739 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
