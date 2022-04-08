@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Wood_floor.tres" type="Material" id=2]
@@ -22,6 +22,9 @@
 [sub_resource type="BoxShape" id=5]
 
 [sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.65098, 0.380392, 0, 1 )
 
 [node name="Scene" type="Spatial"]
 
@@ -509,3 +512,33 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.4341
 
 [node name="MadonnaInTheMeadow" parent="." instance=ExtResource( 14 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.3002, 2.03397, -5.00194 )
+
+[node name="Wall" type="StaticBody" parent="."]
+transform = Transform( 2.05487, 0.0834754, 0, -0.425093, 0.403513, 0, 0, 0, 0.082148, 0, 0.870521, 4.96276 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="."]
+transform = Transform( 2.05487, 0.0834754, 0, -0.425093, 0.403513, 0, 0, 0, 0.082148, 0, 2.07978, 4.96276 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
