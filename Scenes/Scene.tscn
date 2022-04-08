@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Wood_floor.tres" type="Material" id=2]
@@ -7,6 +7,13 @@
 [ext_resource path="res://Scenes/VitruvianMan.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/LadyWirhAnErmine.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/DialogCode.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Transfiguration.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/WomanWithAVeil.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/SibilaDelfica.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/TheEntombment.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/CreationOfAdam.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/RaphaelSanzino.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/MadonnaInTheMeadow.tscn" type="PackedScene" id=14]
 
 [sub_resource type="CubeMesh" id=3]
 
@@ -432,7 +439,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shape = SubResource( 4 )
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 19.6, 8.74228e-10, 0, -1.71349e-06, 0.01, 0, 0, 0, -19.6, 0, 0, 0 )
+transform = Transform( 19.6, 8.74228e-10, 0, -1.71349e-06, 0.01, 0, 0, 0, -19.6, 0.0893517, -0.0226145, 0.0534897 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -450,16 +457,16 @@ material/0 = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.750219, 6.61612e-05, -0.354252 )
 
 [node name="Geoconda" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.815293, 1.81537, -19.228 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.886, 1.81537, -15.3651 )
 
 [node name="GinebraDeBenci" parent="." instance=ExtResource( 4 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -4.99946, 2.31774, -10.014 )
 
 [node name="VitruvianMan" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99858, 2.03971, -14.9663 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.94987, 2.03971, -14.9663 )
 
 [node name="LadyWirhAnErmine" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95841, 2.19945, -11.6322 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.95841, 2.19945, -11.6322 )
 
 [node name="PopupDialog" type="PopupDialog" parent="."]
 margin_top = 408.0
@@ -481,3 +488,24 @@ margin_right = 1016.0
 margin_bottom = 104.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis turpis nisl. Suspendisse tempor turpis nulla, euismod vehicula arcu rhoncus nec. Suspendisse laoreet, lacus in ullamcorper ultrices, nunc magna aliquet velit, ac imperdiet mauris mauris quis leo. Phasellus id blandit magna, at efficitur dui. Integer volutpat a nunc vel fringilla. Etiam sollicitudin tincidunt massa id dapibus. Duis vulputate aliquet sem ac facilisis. Nulla eget magna scelerisque sapien porttitor fermentum eget sed augue. Vivamus eu mauris ornare, ullamcorper purus non, rutrum dolor."
 autowrap = true
+
+[node name="CreationOfAdam" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2957, 2.21908, 0.0728543 )
+
+[node name="SibilaDelfica" parent="." instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.639, 2.3246, -4.99481 )
+
+[node name="WomanWithAVeil" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.9397, 2.54625, -5.00634 )
+
+[node name="Transfiguration" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.9623, 2.458, 4.97112 )
+
+[node name="TheEntombment" parent="." instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.6851, 2.36429, 4.98863 )
+
+[node name="RaphaelSanzino" parent="." instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.43416, 2.40159, 4.98251 )
+
+[node name="MadonnaInTheMeadow" parent="." instance=ExtResource( 14 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.3002, 2.03397, -5.00194 )
