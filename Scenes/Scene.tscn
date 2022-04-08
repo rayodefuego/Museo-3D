@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Wood_floor.tres" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/GinebraDeBenci.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/VitruvianMan.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/LadyWirhAnErmine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/DialogCode.gd" type="Script" id=7]
 
 [sub_resource type="CubeMesh" id=3]
 
@@ -459,3 +460,24 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99858, 2.03971, -14.9663 )
 
 [node name="LadyWirhAnErmine" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95841, 2.19945, -11.6322 )
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+margin_top = 408.0
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 7 )
+
+[node name="NameLabel" type="Label" parent="PopupDialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 24.0
+text = "Name"
+
+[node name="TextLabel" type="Label" parent="PopupDialog"]
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 1016.0
+margin_bottom = 104.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis turpis nisl. Suspendisse tempor turpis nulla, euismod vehicula arcu rhoncus nec. Suspendisse laoreet, lacus in ullamcorper ultrices, nunc magna aliquet velit, ac imperdiet mauris mauris quis leo. Phasellus id blandit magna, at efficitur dui. Integer volutpat a nunc vel fringilla. Etiam sollicitudin tincidunt massa id dapibus. Duis vulputate aliquet sem ac facilisis. Nulla eget magna scelerisque sapien porttitor fermentum eget sed augue. Vivamus eu mauris ornare, ullamcorper purus non, rutrum dolor."
+autowrap = true

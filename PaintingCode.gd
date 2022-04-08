@@ -11,3 +11,9 @@ onready var actual_text = format_text % [painting_name, painting_author, paintin
 
 func _ready():
 	print(actual_text)
+	
+
+func picture_clicked():
+	var popup : PopupDialog = get_node("/root/Scene/PopupDialog")
+	popup.set_popup(painting_name, painting_text)
+	popup.popup()

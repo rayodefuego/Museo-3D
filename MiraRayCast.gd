@@ -2,8 +2,10 @@ extends RayCast
 
 
 func _physics_process(delta):
-	var colider: Area = get_collider()
+	var colider = get_collider()
 	
-	if colider != null:
+	if colider != null and Input.is_action_just_pressed("click"):
 		print(colider.name)
+		colider.prueba()
+	
 	
