@@ -1,0 +1,544 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wood_floor.tres" type="Material" id=2]
+[ext_resource path="res://Scenes/Geoconda.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GinebraDeBenci.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/VitruvianMan.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/LadyWirhAnErmine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/DialogCode.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Transfiguration.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/WomanWithAVeil.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/SibilaDelfica.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/TheEntombment.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/CreationOfAdam.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/RaphaelSanzino.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/MadonnaInTheMeadow.tscn" type="PackedScene" id=14]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.65098, 0.380392, 0, 1 )
+
+[node name="Scene" type="Spatial"]
+
+[node name="Museum" type="Spatial" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Room" type="Spatial" parent="Museum"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorWall" type="Spatial" parent="Museum/Room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody" parent="Museum/Room/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, -3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="UpWall" type="StaticBody" parent="Museum/Room/DoorWall"]
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 0.15, 0, 4, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall" type="StaticBody" parent="Museum/Room"]
+transform = Transform( 5, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 0, 0, -7.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, -5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="Museum/Room"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, 5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Room2" type="Spatial" parent="Museum"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 12.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorWall" type="Spatial" parent="Museum/Room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody" parent="Museum/Room2/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, -3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room2/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="UpWall" type="StaticBody" parent="Museum/Room2/DoorWall"]
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 0.15, 0, 4, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall" type="StaticBody" parent="Museum/Room2"]
+transform = Transform( 5, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 0, 0, -7.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room2"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, -5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="Museum/Room2"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, 5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room2/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room2/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Room3" type="Spatial" parent="Museum"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.3, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorWall" type="Spatial" parent="Museum/Room3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody" parent="Museum/Room3/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, -3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room3/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="UpWall" type="StaticBody" parent="Museum/Room3/DoorWall"]
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 0.15, 0, 4, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall" type="StaticBody" parent="Museum/Room3"]
+transform = Transform( 5, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 0, 0, -7.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room3"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, -5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="Museum/Room3"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, 5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room3/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room3/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Room4" type="Spatial" parent="Museum"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.3, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorWall" type="Spatial" parent="Museum/Room4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody" parent="Museum/Room4/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, -3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/DoorWall/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room4/DoorWall"]
+transform = Transform( 2, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 3, 0, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/DoorWall/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="UpWall" type="StaticBody" parent="Museum/Room4/DoorWall"]
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 0.15, 0, 4, -0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/DoorWall/UpWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall" type="StaticBody" parent="Museum/Room4"]
+transform = Transform( 5, 0, 0, 0, 2.4, 0, 0, 0, 0.15, 0, 0, -7.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="Museum/Room4"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, -5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="Museum/Room4"]
+transform = Transform( -3.0598e-07, 0, 0.15, 0, 2.4, 0, -7, 0, -6.55671e-09, 5.15, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Museum/Room4/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Museum/Room4/Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 19.6, 8.74228e-10, 0, -1.71349e-06, 0.01, 0, 0, 0, -19.6, 0.0893517, -0.0226145, 0.0534897 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 1, 0, 0, 5.82077e-11, 1, 0, 0, 0, 1, 0, -1, 0 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.750219, 6.61612e-05, -0.354252 )
+
+[node name="Geoconda" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.886, 1.81537, -15.3651 )
+
+[node name="GinebraDeBenci" parent="." instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -4.99946, 2.31774, -10.014 )
+
+[node name="VitruvianMan" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.94987, 2.03971, -14.9663 )
+
+[node name="LadyWirhAnErmine" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.95841, 2.19945, -11.6322 )
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+margin_top = 408.0
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 7 )
+
+[node name="NameLabel" type="Label" parent="PopupDialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 24.0
+text = "Name"
+
+[node name="TextLabel" type="Label" parent="PopupDialog"]
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 1016.0
+margin_bottom = 104.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis turpis nisl. Suspendisse tempor turpis nulla, euismod vehicula arcu rhoncus nec. Suspendisse laoreet, lacus in ullamcorper ultrices, nunc magna aliquet velit, ac imperdiet mauris mauris quis leo. Phasellus id blandit magna, at efficitur dui. Integer volutpat a nunc vel fringilla. Etiam sollicitudin tincidunt massa id dapibus. Duis vulputate aliquet sem ac facilisis. Nulla eget magna scelerisque sapien porttitor fermentum eget sed augue. Vivamus eu mauris ornare, ullamcorper purus non, rutrum dolor."
+autowrap = true
+
+[node name="CreationOfAdam" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2957, 2.21908, 0.0728543 )
+
+[node name="SibilaDelfica" parent="." instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.639, 2.3246, -4.99481 )
+
+[node name="WomanWithAVeil" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.9397, 2.54625, -5.00634 )
+
+[node name="Transfiguration" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.9623, 2.458, 4.97112 )
+
+[node name="TheEntombment" parent="." instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.6851, 2.36429, 4.98863 )
+
+[node name="RaphaelSanzino" parent="." instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.43416, 2.40159, 4.98251 )
+
+[node name="MadonnaInTheMeadow" parent="." instance=ExtResource( 14 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.3002, 2.03397, -5.00194 )
+
+[node name="Wall" type="StaticBody" parent="."]
+transform = Transform( 2.05487, 0.0834754, 0, -0.425093, 0.403513, 0, 0, 0, 0.082148, 0, 0.870521, 4.96276 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="."]
+transform = Transform( 2.05487, 0.0834754, 0, -0.425093, 0.403513, 0, 0, 0, 0.082148, 0, 2.07978, 4.96276 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 4 )

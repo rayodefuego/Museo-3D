@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Meshes/LadyWithAnErmine.glb" type="PackedScene" id=1]
+[ext_resource path="res://PaintingCode.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0193007, 0.325, 0.236394 )
+
+[node name="LadyWirhAnErmine" type="Area"]
+script = ExtResource( 2 )
+painting_name = "Lady with an ermine"
+painting_author = "Leonardo da Vinci"
+painting_text = "The ermines are cute"
+
+[node name="LadyWithAnErmine" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+shape = SubResource( 1 )
